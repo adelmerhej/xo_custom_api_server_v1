@@ -5,9 +5,12 @@ const app: Application = express();
 
 // Basic route
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello from Express with TypeScript!');
+  res.send('API Root page');
 });
-
+// Health check route
+app.get('/health', (req: Request, res: Response) => {
+  res.send('API is healthy');
+});
 
 
 export default app;
